@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Stay Safe</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="style.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <center>
+        <br /><br />
+        <section>
+          <br />
+          <h3>Stay Safe</h3>
+          <br />
+          <br />
+        </section>
+        <br /><br />
+        <img
+          src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/face-masks-washed-drying.jpg?quality=82&strip=all&w=1200"
+        />
+        <br /><br />
+        <p style="font-size: 22px">
+          Take a picture of yourself with or without a mask and see the results
+          <br />
+          <br />
+        </p>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Webcam View - </label>
+          <div id="camera"></div>
+          <br /><br />
+          <button
+            onclick="take_snapshot();"
+            class="btn btn-warning"
+          >
+            Capture Image
+          </button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label> Prediction 1 - </label>
+          <p
+            class="emotion_name"
+            id="result_emotion_name"
+          ></p>
+
+          <p
+            class="emoji"
+            id="update_emoji2"
+          ></p>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Snapshot - </label>
+          <div id="result"></div>
+          <br /><br />
+          <button
+            onclick="check();"
+            class="btn btn-success"
+          >
+            Predict Emotion
+          </button>
+        </div>
+      </center>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
